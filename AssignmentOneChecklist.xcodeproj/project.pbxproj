@@ -14,6 +14,8 @@
 		18A541C629C97C8D004519AC /* AssignmentOneChecklistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541C529C97C8D004519AC /* AssignmentOneChecklistTests.swift */; };
 		18A541D029C97C8D004519AC /* AssignmentOneChecklistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541CF29C97C8D004519AC /* AssignmentOneChecklistUITests.swift */; };
 		18A541D229C97C8D004519AC /* AssignmentOneChecklistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541D129C97C8D004519AC /* AssignmentOneChecklistUITestsLaunchTests.swift */; };
+		18A541E029C97F12004519AC /* Datamodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541DF29C97F12004519AC /* Datamodel.swift */; };
+		18A541E129C97F7B004519AC /* Datamodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541DF29C97F12004519AC /* Datamodel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		18A541CB29C97C8D004519AC /* AssignmentOneChecklistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentOneChecklistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A541CF29C97C8D004519AC /* AssignmentOneChecklistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneChecklistUITests.swift; sourceTree = "<group>"; };
 		18A541D129C97C8D004519AC /* AssignmentOneChecklistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneChecklistUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		18A541DE29C97D1E004519AC /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
+		18A541DF29C97F12004519AC /* Datamodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Datamodel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +98,12 @@
 		18A541B329C97C8B004519AC /* AssignmentOneChecklist */ = {
 			isa = PBXGroup;
 			children = (
+				18A541DE29C97D1E004519AC /* ReadMe.md */,
 				18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */,
 				18A541B629C97C8B004519AC /* ContentView.swift */,
 				18A541B829C97C8D004519AC /* Assets.xcassets */,
 				18A541BA29C97C8D004519AC /* Preview Content */,
+				18A541DF29C97F12004519AC /* Datamodel.swift */,
 			);
 			path = AssignmentOneChecklist;
 			sourceTree = "<group>";
@@ -257,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A541E029C97F12004519AC /* Datamodel.swift in Sources */,
 				18A541B729C97C8B004519AC /* ContentView.swift in Sources */,
 				18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */,
 			);
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A541C629C97C8D004519AC /* AssignmentOneChecklistTests.swift in Sources */,
+				18A541E129C97F7B004519AC /* Datamodel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
