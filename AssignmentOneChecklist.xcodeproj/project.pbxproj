@@ -78,6 +78,7 @@
 		18A541A829C97C8B004519AC = {
 			isa = PBXGroup;
 			children = (
+				18A541DE29C97D1E004519AC /* ReadMe.md */,
 				18A541B329C97C8B004519AC /* AssignmentOneChecklist */,
 				18A541C429C97C8D004519AC /* AssignmentOneChecklistTests */,
 				18A541CE29C97C8D004519AC /* AssignmentOneChecklistUITests */,
@@ -98,7 +99,6 @@
 		18A541B329C97C8B004519AC /* AssignmentOneChecklist */ = {
 			isa = PBXGroup;
 			children = (
-				18A541DE29C97D1E004519AC /* ReadMe.md */,
 				18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */,
 				18A541B629C97C8B004519AC /* ContentView.swift */,
 				18A541B829C97C8D004519AC /* Assets.xcassets */,
