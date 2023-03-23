@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var tasks: [TaskModel] = [
         TaskModel(text: "Do Laundry"),
-        TaskModel(text: "Clean Bathroom"),
-        TaskModel(text: "Vacuum"),
+        TaskModel(text: "Clean Bathroom", checked: true),
+        TaskModel(text: "Vacuum", checked: true),
         TaskModel(text: "Mobile Device Software Development 1")
     ]
     

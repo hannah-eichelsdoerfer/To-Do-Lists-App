@@ -10,7 +10,7 @@ import Foundation
 struct TaskModel: Identifiable {
     let id: UUID = UUID()
     let text: String
-    let checked: Bool = false
+    var checked: Bool = false
 }
 
 
