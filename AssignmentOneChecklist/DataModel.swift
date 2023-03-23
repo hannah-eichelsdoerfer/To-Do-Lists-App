@@ -5,9 +5,12 @@
 //  Created by Hannah on 21/3/2023.
 //
 
-struct Task {
+import Foundation
+
+struct TaskModel: Identifiable {
+    let id: UUID = UUID()
     let text: String
-    var checked: Bool = false
+    let checked: Bool = false
 }
 
 

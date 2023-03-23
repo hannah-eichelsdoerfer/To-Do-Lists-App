@@ -8,14 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    var tasks = ["Do Laundry", "Clean Bathroom", "Vacuum", "Mobile Device Software Development 1"]
+    var tasks: [TaskModel] = [
+        TaskModel(text: "Do Laundry"),
+        TaskModel(text: "Clean Bathroom"),
+        TaskModel(text: "Vacuum"),
+        TaskModel(text: "Mobile Device Software Development 1")
+    ]
     
     var body: some View {
         VStack {
             List {
-                ForEach(tasks, id: \.self) {
-                    task in
-                    TaskView(task: task)
+                ForEach(tasks) { task in
+                    TaskView(task: task.text)
                 }
             }
         }
