@@ -17,6 +17,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Text("To-Do List").font(.title).fontWeight(.bold)
             List {
                 ForEach(tasks) { task in
                     TaskView(task: task)
