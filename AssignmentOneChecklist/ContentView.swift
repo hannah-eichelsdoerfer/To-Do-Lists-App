@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    var tasks = ["Do Laundry", "Clean Bathroom", "Vacuum", "Mobile Device Software Development 1"]
+    
     var body: some View {
         VStack {
             List {
-                Text("Do Laundry")
-                Text("Clean Bathroom")
-                Text("Vaccum")
-                Text("Mobile Device Software Development 1")
-            }
+                ForEach(tasks, id: \.self) {
+                    task in
+                    Text(task)
+                }
+            }.navigationTitle("To-do-List")
         }
     }
 }
