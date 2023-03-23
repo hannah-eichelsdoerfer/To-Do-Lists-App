@@ -15,9 +15,13 @@ struct ContentView: View {
             List {
                 ForEach(tasks, id: \.self) {
                     task in
-                    Text(task)
+                    HStack {
+                        Text(task)
+                        Spacer()
+                        Image(systemName: "checkmark.circle").foregroundColor(.gray)
+                    }
                 }
-            }.navigationTitle("To-do-List")
+            }
         }
     }
 }
