@@ -15,11 +15,7 @@ struct ContentView: View {
             List {
                 ForEach(tasks, id: \.self) {
                     task in
-                    HStack {
-                        Text(task)
-                        Spacer()
-                        Image(systemName: "checkmark.circle").foregroundColor(.gray)
-                    }
+                    TaskView(task: task)
                 }
             }
         }
