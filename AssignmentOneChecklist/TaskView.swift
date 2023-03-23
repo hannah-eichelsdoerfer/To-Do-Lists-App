@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct TaskView: View {
-    var task: String
+    let task: TaskModel
     
     var body: some View {
         HStack {
-            Text(task)
+            Text(task.text)
             Spacer()
-            Image(systemName: "checkmark.circle").foregroundColor(.gray)
+            Image(systemName: task.checked ? "checkmark.circle" : "circle").foregroundColor(task.checked ? .green : .gray)
         }
+        .padding(4)
+    }
+}
+
+struct TaskView1_Previews: PreviewProvider {
+    static var task1 = TaskModel(text: "Item 1")
+    
+    static var previews: some View {
+            TaskView(task: task1)
     }
 }

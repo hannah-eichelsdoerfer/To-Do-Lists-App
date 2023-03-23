@@ -19,10 +19,11 @@ struct ContentView: View {
         VStack {
             List {
                 ForEach(tasks) { task in
-                    TaskView(task: task.text)
+                    TaskView(task: task)
                 }
             }
         }
+        .fontDesign(.monospaced)
     }
 }
 
