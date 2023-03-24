@@ -9,22 +9,23 @@ import SwiftUI
 
 struct ContentView: View {
     var tasks: [TaskModel] = [
-        TaskModel(text: "Do Laundry"),
-        TaskModel(text: "Clean Bathroom", checked: true),
-        TaskModel(text: "Vacuum", checked: true),
-        TaskModel(text: "Mobile Device Software Development 1")
+        TaskModel(text: "Do Laundry", categoryId: 2),
+        TaskModel(text: "Clean Bathroom", categoryId: 2, checked: true),
+        TaskModel(text: "Vacuum", categoryId: 2, checked: true),
+        TaskModel(text: "Mobile Device Software Development 1", categoryId: 1),
+        TaskModel(text: "Finish Ticket Implementation", categoryId: 3)
     ]
     
     var body: some View {
         VStack {
-            Text("To-Do List").font(.title).fontWeight(.bold)
+            Text("To-Do List ").font(.title).fontWeight(.bold).padding([.vertical], 16)
             List {
                 ForEach(tasks) { task in
                     TaskView(task: task)
                 }
             }
+            .listStyle(.plain)
         }
-        .fontDesign(.monospaced)
     }
 }
 
