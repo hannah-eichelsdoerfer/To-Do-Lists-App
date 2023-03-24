@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskView: View {
-    let task: TaskModel
+    let task: Task
     
     var categories: [Category] = [
         Category(id: 1, name: "University", color: Color.red),
@@ -16,6 +16,7 @@ struct TaskView: View {
         Category(id: 3, name: "Work", color: Color.blue)
     ]
     
+    //  finds the color of a category which is referenced in the task through categoryId
     func findCategory(categoryId: Int) -> Color {
         categories.first(where: { $0.id == categoryId })!.color
     }
@@ -27,17 +28,9 @@ struct TaskView: View {
             RoundedRectangle(cornerRadius: 20).foregroundColor(color).frame(width: 2, height: 45)
             Text(task.text).padding(.leading)
             Spacer()
-            Image(systemName: task.checked ? "checkmark.circle" : "circle").resizable().foregroundColor(task.checked ? .black : .gray).frame(width: 22, height: 22)
+            Image(systemName: task.checked ? "checkmark.circle" : "circle").resizable().foregroundColor(task.checked ? .black : .gray).frame(width: 24, height: 24)
         }
         .padding(4)
         .listRowSeparator(.hidden)
-    }
-}
-
-struct TaskView1_Previews: PreviewProvider {
-    static var task1 = TaskModel(text: "Item 1", categoryId: 1)
-    
-    static var previews: some View {
-            TaskView(task: task1)
     }
 }
