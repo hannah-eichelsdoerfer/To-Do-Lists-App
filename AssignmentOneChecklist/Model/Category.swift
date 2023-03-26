@@ -25,7 +25,9 @@ var categories: [Category] = [
     Category(id: 3, name: "Work", color: Color.blue)
 ]
 
-//  finds the color of a category which is referenced in the task through categoryId
+///  Finds the category with the given id
+///  - parameter categoryId: the id of the category to find
+///  - Returns: the color of the category with the given id
 func findCategory(categoryId: Int) -> Color {
     categories.first(where: { $0.id == categoryId })!.color
 }
