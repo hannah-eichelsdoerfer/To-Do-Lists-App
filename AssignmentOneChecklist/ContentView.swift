@@ -12,9 +12,7 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(tasks) { task in
-                    NavigationLink(destination: TaskDetailView(task: task)){
-                        TaskView(task: task)
-                    }
+                   TaskView(task: task)
                 }
             }
             .listStyle(.plain)
