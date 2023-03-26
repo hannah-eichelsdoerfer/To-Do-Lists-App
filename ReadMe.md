@@ -26,6 +26,10 @@ Other topics that were covered but not implemented in the first milestone are:
 - Binding
 
 First milestone video:
-<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/4878ec8db65a4751a0e0c984a9cf61a0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+Link to Video: 
+> https://www.loom.com/share/4878ec8db65a4751a0e0c984a9cf61a0
 
-Link to Video: https://www.loom.com/share/4878ec8db65a4751a0e0c984a9cf61a0
+https://user-images.githubusercontent.com/64103699/227772226-195ec910-d7b1-448f-bc16-df5cb8a08bf4.mp4
+
+
+
