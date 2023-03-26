@@ -19,11 +19,11 @@ final class AssignmentOneChecklistTests: XCTestCase {
     }
 
     func testTaskInitialization() throws {
-            let task = Task(text: "Buy Groceries", categoryId: 1)
-            XCTAssertEqual(task.text, "Buy Groceries")
-            XCTAssertEqual(task.categoryId, 1)
-            XCTAssertFalse(task.checked)
-        }
+        let task = Task(text: "Buy Groceries", categoryId: 1)
+        XCTAssertEqual(task.text, "Buy Groceries")
+        XCTAssertEqual(task.categoryId, 1)
+        XCTAssertFalse(task.checked)
+    }
 
     func testCategoryInitialization() throws {
         let category = Category(id: 1, name: "Shopping", color: .red)
