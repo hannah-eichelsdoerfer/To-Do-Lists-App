@@ -13,3 +13,11 @@ struct Task: Identifiable {
     let categoryId: Int
     var checked: Bool = false
 }
+
+var tasks: [Task] = [
+    Task(text: "Do Laundry", categoryId: 2),
+    Task(text: "Clean Bathroom", categoryId: 2, checked: true),
+    Task(text: "Vacuum", categoryId: 2, checked: true),
+    Task(text: "Mobile Device Software Development 1", categoryId: 1),
+    Task(text: "Finish Ticket Implementation", categoryId: 3)
+]
