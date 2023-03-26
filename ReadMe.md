@@ -25,7 +25,7 @@ Other topics that were covered but not implemented in the first milestone are:
 - State
 - Binding
 
-First milestone video:
+### First milestone video
 Link to Video: 
 > https://www.loom.com/share/4878ec8db65a4751a0e0c984a9cf61a0
 
