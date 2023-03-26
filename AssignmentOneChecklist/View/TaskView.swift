@@ -11,7 +11,7 @@ struct TaskView: View {
     let task: Task
 
     var body: some View {
-        let color = findCategory(categoryId: task.categoryId)
+        let color = getCategoryColor(categoryId: task.categoryId)
         
         return HStack {
             RoundedRectangle(cornerRadius: 20).foregroundColor(color).frame(width: 2, height: 45)
