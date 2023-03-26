@@ -19,6 +19,7 @@ struct Category {
     ]
 }
 
+// Data
 var categories: [Category] = [
     Category(id: 1, name: "University", color: Color.red),
     Category(id: 2, name: "Personal", color: Color.yellow),

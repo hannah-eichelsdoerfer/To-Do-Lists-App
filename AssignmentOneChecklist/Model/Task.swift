@@ -14,6 +14,7 @@ struct Task: Identifiable {
     var checked: Bool = false
 }
 
+// Data
 var tasks: [Task] = [
     Task(text: "Do Laundry", categoryId: 2),
     Task(text: "Clean Bathroom", categoryId: 2, checked: true),

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ContentView: View {    
     var body: some View {
         VStack {
             Text("To-Do List ").font(.title).fontWeight(.bold).padding([.vertical], 16)
