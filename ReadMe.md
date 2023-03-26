@@ -11,14 +11,14 @@ We then continued with SwiftUI, which is a framework for building user interface
 Seperation of concerns is a very important topic in SwiftUI, which means that the view should only contain the view code and the logic should be in the ViewModel. The ViewModel can be a class or struct that is responsible for the logic of the view.
 
 I've implemented the following tasks:
-
-- a navigationview with a list of tasks
-- a static checklist with 5 items, each item has a text, a checked state and a categoryId
-- a static category list with 3 categories, each category has a name and a color
-- a view that displays a list with the tasks, each task is displayed with its category color, text and checked state
+- git source control to document development steps and thoughts
+- basic Documentation setup to expand in the future
+- an app displaying a list of tasks
+- created checklist with 5 items, each item has a text, a checked state and a categoryId
+- created a lift of 3 categories, each category has a name and a color
+- a subview for each task which displays a RoundedRectangle category color, text and checked state with an icon
 
 Other topics that were covered but not implemented in the first milestone are:
-
 - Navigation
 - Inputs
 - Master and Detail View
@@ -26,3 +26,6 @@ Other topics that were covered but not implemented in the first milestone are:
 - Binding
 
 First milestone video:
+<div style="position: relative; padding-bottom: 62.5%; height: 0;"><iframe src="https://www.loom.com/embed/4878ec8db65a4751a0e0c984a9cf61a0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
+Link to Video: https://www.loom.com/share/4878ec8db65a4751a0e0c984a9cf61a0
