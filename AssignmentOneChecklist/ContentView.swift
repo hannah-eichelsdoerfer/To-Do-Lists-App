@@ -9,14 +9,16 @@ import SwiftUI
 
 struct ContentView: View {    
     var body: some View {
-        VStack {
-            Text("To-Do List ").font(.title).fontWeight(.bold).padding([.vertical], 16)
+        NavigationView {
             List {
                 ForEach(tasks) { task in
-                    TaskView(task: task)
+                    NavigationLink(destination: TaskDetailView(task: task)){
+                        TaskView(task: task)
+                    }
                 }
             }
             .listStyle(.plain)
+            .navigationTitle("To-Do List")
         }
     }
 }
