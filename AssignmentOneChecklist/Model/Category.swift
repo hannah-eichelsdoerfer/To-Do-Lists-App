@@ -26,7 +26,10 @@ var categories: [Category] = [
     Category(id: 3, name: "Work", color: Color.blue)
 ]
 
-func findCategory(categoryId: Int) -> Color {
+///  Finds the category with the given id
+///  - Parameters:
+///     - categoryId: the id of the category to find
+///  - Returns: the color of the category with the given id
+func getCategoryColor(categoryId: Int) -> Color {
     categories.first(where: { $0.id == categoryId })!.color
 }
-

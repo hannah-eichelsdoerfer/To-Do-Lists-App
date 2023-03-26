@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180E478A29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
+		180E478B29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
 		185E669529CCE7A000186DE8 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669429CCE7A000186DE8 /* TaskView.swift */; };
 		185E669B29CD719200186DE8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669A29CD719200186DE8 /* Category.swift */; };
 		185E669D29CD71A500186DE8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669C29CD71A500186DE8 /* Task.swift */; };
@@ -37,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180E478929D02B63008A64BD /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		185E669429CCE7A000186DE8 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		185E669A29CD719200186DE8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		185E669C29CD71A500186DE8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -81,6 +84,7 @@
 		185E669829CCEB2100186DE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				185E669429CCE7A000186DE8 /* TaskView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -97,6 +101,7 @@
 		18A541A829C97C8B004519AC = {
 			isa = PBXGroup;
 			children = (
+				180E478929D02B63008A64BD /* Documentation.docc */,
 				18A541DE29C97D1E004519AC /* ReadMe.md */,
 				18A541B329C97C8B004519AC /* AssignmentOneChecklist */,
 				18A541C429C97C8D004519AC /* AssignmentOneChecklistTests */,
@@ -122,7 +127,6 @@
 				185E669829CCEB2100186DE8 /* View */,
 				18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */,
 				18A541B629C97C8B004519AC /* ContentView.swift */,
-				185E669429CCE7A000186DE8 /* TaskView.swift */,
 				18A541B829C97C8D004519AC /* Assets.xcassets */,
 				18A541BA29C97C8D004519AC /* Preview Content */,
 			);
@@ -285,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185E669B29CD719200186DE8 /* Category.swift in Sources */,
+				180E478A29D02B63008A64BD /* Documentation.docc in Sources */,
 				18A541B729C97C8B004519AC /* ContentView.swift in Sources */,
 				18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */,
 				185E669D29CD71A500186DE8 /* Task.swift in Sources */,
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A541C629C97C8D004519AC /* AssignmentOneChecklistTests.swift in Sources */,
+				180E478B29D02B63008A64BD /* Documentation.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
