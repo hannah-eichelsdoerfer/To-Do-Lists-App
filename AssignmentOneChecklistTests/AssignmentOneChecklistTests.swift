@@ -31,6 +31,16 @@ final class AssignmentOneChecklistTests: XCTestCase {
         XCTAssertEqual(category.name, "Shopping")
         XCTAssertEqual(category.color, .red)
     }
+    
+    func testGetCategoryColor() {
+       // Create task with valid category ID to check that the correct color is returned
+       let taskWithValidCategory = Task(text: "Task 1", categoryId: 2)
+       XCTAssertEqual(getCategoryColor(categoryId: taskWithValidCategory.categoryId), .yellow)
+       
+       // Create task with invalid category ID to check if default gray color is returned
+       let taskWithInvalidCategory = Task(text: "Task 2", categoryId: 4)
+       XCTAssertEqual(getCategoryColor(categoryId: taskWithInvalidCategory.categoryId), .gray)
+   }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

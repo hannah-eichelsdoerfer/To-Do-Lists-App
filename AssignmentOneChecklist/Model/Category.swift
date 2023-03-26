@@ -31,5 +31,10 @@ var categories: [Category] = [
 ///     - categoryId: the id of the category to find
 ///  - Returns: the color of the category with the given id
 func getCategoryColor(categoryId: Int) -> Color {
-    categories.first(where: { $0.id == categoryId })!.color
+    // if category exists, return its color
+    if let category = categories.first(where: { $0.id == categoryId }) {
+        return category.color
+    }
+    // otherwise return a default color
+    return Color.gray
 }
