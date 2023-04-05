@@ -31,6 +31,9 @@ struct ListView: View {
                 ForEach(tasks) { task in
                     TaskRowView(task: task)
                 }
+                .onDelete { indexSet in
+                    tasks.remove(atOffsets: indexSet)
+                }
             }
             .listStyle(.plain)
         }
