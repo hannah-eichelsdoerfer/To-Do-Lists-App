@@ -13,6 +13,8 @@ struct ListView: View {
     @State var tasks: [Task] = testTasks
     @State var newTask : String = ""
     
+    @Environment(\.editMode) private var editMode
+    
     var body: some View {
         VStack {
             Text(checklist.name).font(.title)
@@ -32,9 +34,20 @@ struct ListView: View {
             }
             .listStyle(.plain)
         }
+        .toolbar {
+            if editMode?.wrappedValue.isEditing == true {
+                Button(action: onReset) { Text("Reset").foregroundColor(.red) }
+            }
+            EditButton()
+            
+        }
     }
     
     func addNewTask() {
         tasks.append(Task(text: newTask))
+    }
+    
+    func onReset() {
+            
     }
 }
