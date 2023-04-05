@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		180E478A29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
 		180E478B29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
-		185E669529CCE7A000186DE8 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669429CCE7A000186DE8 /* TaskView.swift */; };
-		185E669B29CD719200186DE8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669A29CD719200186DE8 /* Category.swift */; };
+		185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BE60529DD1B9A00902A6A /* ListsView.swift */; };
+		185E669529CCE7A000186DE8 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669429CCE7A000186DE8 /* TaskRowView.swift */; };
 		185E669D29CD71A500186DE8 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669C29CD71A500186DE8 /* Task.swift */; };
 		18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */; };
-		18A541B729C97C8B004519AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541B629C97C8B004519AC /* ContentView.swift */; };
+		18A541B729C97C8B004519AC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541B629C97C8B004519AC /* ListView.swift */; };
 		18A541B929C97C8D004519AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A541B829C97C8D004519AC /* Assets.xcassets */; };
 		18A541BC29C97C8D004519AC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A541BB29C97C8D004519AC /* Preview Assets.xcassets */; };
 		18A541C629C97C8D004519AC /* AssignmentOneChecklistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541C529C97C8D004519AC /* AssignmentOneChecklistTests.swift */; };
@@ -42,12 +42,12 @@
 /* Begin PBXFileReference section */
 		180E478929D02B63008A64BD /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		1813EEEA29D042DE00819E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		185E669429CCE7A000186DE8 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
-		185E669A29CD719200186DE8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		185BE60529DD1B9A00902A6A /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
+		185E669429CCE7A000186DE8 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		185E669C29CD71A500186DE8 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		18A541B129C97C8B004519AC /* AssignmentOneChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentOneChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneChecklistApp.swift; sourceTree = "<group>"; };
-		18A541B629C97C8B004519AC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		18A541B629C97C8B004519AC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		18A541B829C97C8D004519AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18A541BB29C97C8D004519AC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		18A541C129C97C8D004519AC /* AssignmentOneChecklistTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentOneChecklistTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +87,9 @@
 		185E669829CCEB2100186DE8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				185E669429CCE7A000186DE8 /* TaskView.swift */,
+				185E669429CCE7A000186DE8 /* TaskRowView.swift */,
 				18CBAE9429D0388900321F13 /* TaskDetailView.swift */,
+				18A541B629C97C8B004519AC /* ListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -96,7 +97,6 @@
 		185E669929CCEB2700186DE8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				185E669A29CD719200186DE8 /* Category.swift */,
 				185E669C29CD71A500186DE8 /* Task.swift */,
 			);
 			path = Model;
@@ -131,7 +131,7 @@
 				185E669929CCEB2700186DE8 /* Model */,
 				185E669829CCEB2100186DE8 /* View */,
 				18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */,
-				18A541B629C97C8B004519AC /* ContentView.swift */,
+				185BE60529DD1B9A00902A6A /* ListsView.swift */,
 				18A541B829C97C8D004519AC /* Assets.xcassets */,
 				18A541BA29C97C8D004519AC /* Preview Content */,
 			);
@@ -179,6 +179,8 @@
 			dependencies = (
 			);
 			name = AssignmentOneChecklist;
+			packageProductDependencies = (
+			);
 			productName = AssignmentOneChecklist;
 			productReference = 18A541B129C97C8B004519AC /* AssignmentOneChecklist.app */;
 			productType = "com.apple.product-type.application";
@@ -251,6 +253,8 @@
 				Base,
 			);
 			mainGroup = 18A541A829C97C8B004519AC;
+			packageReferences = (
+			);
 			productRefGroup = 18A541B229C97C8B004519AC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -293,13 +297,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */,
 				18CBAE9529D0388900321F13 /* TaskDetailView.swift in Sources */,
-				185E669B29CD719200186DE8 /* Category.swift in Sources */,
 				180E478A29D02B63008A64BD /* Documentation.docc in Sources */,
-				18A541B729C97C8B004519AC /* ContentView.swift in Sources */,
+				18A541B729C97C8B004519AC /* ListView.swift in Sources */,
 				18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */,
 				185E669D29CD71A500186DE8 /* Task.swift in Sources */,
-				185E669529CCE7A000186DE8 /* TaskView.swift in Sources */,
+				185E669529CCE7A000186DE8 /* TaskRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
