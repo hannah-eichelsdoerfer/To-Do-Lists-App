@@ -19,7 +19,6 @@
 		18A541C629C97C8D004519AC /* AssignmentOneChecklistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541C529C97C8D004519AC /* AssignmentOneChecklistTests.swift */; };
 		18A541D029C97C8D004519AC /* AssignmentOneChecklistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541CF29C97C8D004519AC /* AssignmentOneChecklistUITests.swift */; };
 		18A541D229C97C8D004519AC /* AssignmentOneChecklistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541D129C97C8D004519AC /* AssignmentOneChecklistUITestsLaunchTests.swift */; };
-		18CBAE9529D0388900321F13 /* TaskDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CBAE9429D0388900321F13 /* TaskDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +55,6 @@
 		18A541CF29C97C8D004519AC /* AssignmentOneChecklistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneChecklistUITests.swift; sourceTree = "<group>"; };
 		18A541D129C97C8D004519AC /* AssignmentOneChecklistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneChecklistUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		18A541DE29C97D1E004519AC /* ReadMe.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = ReadMe.md; sourceTree = "<group>"; };
-		18CBAE9429D0388900321F13 /* TaskDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				185E669429CCE7A000186DE8 /* TaskRowView.swift */,
-				18CBAE9429D0388900321F13 /* TaskDetailView.swift */,
 				18A541B629C97C8B004519AC /* ListView.swift */,
 			);
 			path = View;
@@ -298,7 +295,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */,
-				18CBAE9529D0388900321F13 /* TaskDetailView.swift in Sources */,
 				180E478A29D02B63008A64BD /* Documentation.docc in Sources */,
 				18A541B729C97C8B004519AC /* ListView.swift in Sources */,
 				18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */,
