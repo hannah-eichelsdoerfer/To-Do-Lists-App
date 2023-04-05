@@ -40,7 +40,8 @@ struct ListView: View {
                     .disabled(newTask.isEmpty)
                 }
                 ForEach(checklist.tasks) { task in
-                    TaskRowView(task: task) {
+                    TaskRowView(task: task)
+                    .onTapGesture {
                         toggleTask(task: task)
                     }
                 }
@@ -65,7 +66,10 @@ struct ListView: View {
     }
     
     func toggleTask(task: Task) {
+        print(task.id)
+        print(checklist.tasks)
         if let index = checklist.tasks.firstIndex(where: { $0.id == task.id }) {
+            print(index)
             checklist.tasks[index].previousChecked = checklist.tasks[index].checked
             checklist.tasks[index].checked.toggle()
             checklist.save(to: &model)
