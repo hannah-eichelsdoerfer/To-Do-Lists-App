@@ -12,7 +12,7 @@ struct TaskDetailView: View {
 
     var body: some View {
         VStack {
-            Text(categories[0].name).foregroundColor(categories[0].color)
+            Text("TO-DO").foregroundColor(.gray)
             Spacer()
         }.navigationTitle(task.text)
     }

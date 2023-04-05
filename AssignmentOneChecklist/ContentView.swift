@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {    
+struct ContentView: View {
     var body: some View {
         NavigationView {
             List {
                 ForEach(tasks) { task in
-                   TaskView(task: task)
+                   TaskRowView(task: task)
                 }
             }
             .listStyle(.plain)
