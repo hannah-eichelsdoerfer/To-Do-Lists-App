@@ -25,7 +25,7 @@ struct ListsView: View {
                     }
                 }
                 .onDelete { indexSet in
-                    tasks.remove(atOffsets: indexSet)
+                    checklists.remove(atOffsets: indexSet)
                 }
             }
             .navigationTitle("Checklists")
