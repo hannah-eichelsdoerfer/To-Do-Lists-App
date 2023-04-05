@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct AssignmentOneChecklistApp: App {
+    @State var model: DataModel = DataModel()
+    
     var body: some Scene {
         WindowGroup {
-            ListsView(checklists: [])
+            ListsView(model: $model)
         }
     }
 }

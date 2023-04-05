@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ListView.swift
 //  AssignmentOneChecklist
 //
 //  Created by Hannah on 21/3/2023.
@@ -8,16 +8,26 @@
 import SwiftUI
 
 struct ListView: View {
-    var checklist: Checklist
-
-    @State var tasks: [Task] = testTasks
+    @State var checklist: Checklist
+    @Binding var model: DataModel
+    
     @State var newTask : String = ""
     
     @Environment(\.editMode) private var editMode
     
     var body: some View {
         VStack {
-            Text(checklist.name).font(.title)
+            if editMode?.wrappedValue.isEditing == true {
+                // editable TextField that saves changes to the checklist
+                TextField("Enter new name", text: $checklist.name)
+                    .font(.title)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding()
+
+            }
+            if editMode?.wrappedValue.isEditing == false {
+                Text(checklist.name).font(.title)
+            }
             List {
                 HStack {
                     TextField("Enter new task", text: self.$newTask)
@@ -27,12 +37,20 @@ struct ListView: View {
                             .background(Color.blue)
                             .clipShape(Circle())
                             .foregroundColor(.white) })
+                    .disabled(newTask.isEmpty)
                 }
-                ForEach(tasks) { task in
-                    TaskRowView(task: task)
+                ForEach(checklist.tasks) { task in
+                    TaskRowView(task: task) {
+                        toggleTask(task: task)
+                    }
                 }
                 .onDelete { indexSet in
-                    tasks.remove(atOffsets: indexSet)
+                    checklist.tasks.remove(atOffsets: indexSet)
+                    checklist.save(to: &model)
+                }
+                .onMove { indexSet, offset in
+                    checklist.tasks.move(fromOffsets: indexSet, toOffset: offset)
+                    checklist.save(to: &model)
                 }
             }
             .listStyle(.plain)
@@ -46,11 +64,22 @@ struct ListView: View {
         }
     }
     
+    func toggleTask(task: Task) {
+        if let index = checklist.tasks.firstIndex(where: { $0.id == task.id }) {
+            checklist.tasks[index].previousChecked = checklist.tasks[index].checked
+            checklist.tasks[index].checked.toggle()
+            checklist.save(to: &model)
+        }
+    }
+    
     func addNewTask() {
-        tasks.append(Task(text: newTask))
+        checklist.tasks.append(Task(text: newTask))
+        newTask = ""
+        checklist.save(to: &model)
     }
     
     func onReset() {
-            
+        checklist.reset()
+        checklist.save(to: &model)
     }
 }

@@ -8,14 +8,23 @@
 import SwiftUI
 
 struct TaskRowView: View {
-    var task: Task
+    @State var task: Task
+    var onToggle: () -> Void
 
     var body: some View {
         return HStack {
             RoundedRectangle(cornerRadius: 20).foregroundColor(.gray).frame(width: 2, height: 45)
             Text(task.text).padding(.leading)
             Spacer()
-            Image(systemName: task.checked ? "checkmark.circle" : "circle").resizable().foregroundColor(task.checked ? .black : .gray).frame(width: 24, height: 24)
+            Button(action: {
+                task.checked.toggle()
+                onToggle()
+            }) {
+                Image(systemName: task.checked ? "checkmark.circle.fill" : "circle")
+                    .resizable()
+                    .foregroundColor(.gray)
+                    .frame(width: 24, height: 24)
+            }
         }
         .padding(4)
         .listRowSeparator(.hidden)
