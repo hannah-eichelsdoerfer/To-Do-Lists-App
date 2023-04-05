@@ -8,7 +8,7 @@
 import Foundation
 
 struct Task: Codable, Identifiable {
-    var id: UUID { UUID() } // computed property
+    var id: UUID = UUID()
     let text: String
     var checked: Bool = false
     var previousChecked: Bool = false
