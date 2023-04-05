@@ -13,16 +13,18 @@ struct Checklist: Identifiable {
 }
 
 struct ListsView: View {
-//    @Binding
     @State var checklists: [Checklist]
     
     var body: some View {
         NavigationView {
             List {
                 ForEach(checklists) { checklist in
-                    NavigationLink(destination: ListView()) {
+                    NavigationLink(destination: ListView(checklist: checklist)) {
                         Text(checklist.name)
                     }
+                }
+                .onMove { indexSet, offset in
+                    checklists.move(fromOffsets: indexSet, toOffset: offset)
                 }
                 .onDelete { indexSet in
                     checklists.remove(atOffsets: indexSet)

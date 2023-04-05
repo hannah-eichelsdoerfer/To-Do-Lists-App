@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct ListView: View {
+    var checklist: Checklist
+
+    @State var tasks: [Task] = testTasks
+    
     var body: some View {
-        NavigationView {
+        VStack {
+            Text(checklist.name).font(.title)
             List {
                 ForEach(tasks) { task in
-                   TaskRowView(task: task)
+                    TaskRowView(task: task)
                 }
             }
             .listStyle(.plain)
