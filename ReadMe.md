@@ -54,3 +54,6 @@ DetailView:
 
 > https://www.loom.com/share/17697a305de94b878a2ced7aea45833a
 
+https://user-images.githubusercontent.com/64103699/230113650-086192e2-f7a5-4734-882c-3fb6bfd88ff8.mp4
+
+
