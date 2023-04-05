@@ -20,7 +20,7 @@ struct ListsView: View {
         NavigationView {
             List {
                 ForEach(checklists) { checklist in
-                    NavigationLink(destination: Text(checklist.name)) {
+                    NavigationLink(destination: ListView()) {
                         Text(checklist.name)
                     }
                 }
