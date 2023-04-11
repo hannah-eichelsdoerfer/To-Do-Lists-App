@@ -23,10 +23,12 @@ struct ListView: View {
                     .font(.title)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
-
+                    .onChange(of: checklist.name) { _ in
+                        checklist.save(to: &model)
+                    }
             }
             if editMode?.wrappedValue.isEditing == false {
-                Text(checklist.name).font(.title)
+                Text(checklist.name).font(.title).padding().frame(maxWidth: .infinity, alignment: .leading)
             }
             List {
                 HStack {
