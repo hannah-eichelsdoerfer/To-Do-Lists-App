@@ -46,14 +46,6 @@ struct ListsView_Previews: PreviewProvider {
         var model = DataModel()
         model.load()
 
-        // Create a checklist and add it to the model for previewing purposes
-        let checklist = Checklist(id: UUID(), name: "List 3", tasks: [
-            Task(text: "Task 1"),
-            Task( text: "Task 2"),
-            Task(text: "Task 3"),
-        ])
-        model.lists.append(checklist)
-
         return ListsView(model: .constant(model))
     }
 }
