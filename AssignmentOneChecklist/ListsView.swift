@@ -34,6 +34,8 @@ struct ListsView: View {
                 trailing: Button(action: add, label: { Image(systemName: "plus")})
             )
         }
+//        .foregroundColor(.orange)
+        .accentColor(.black)
     }
     
     func add(){
