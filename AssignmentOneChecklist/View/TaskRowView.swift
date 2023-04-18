@@ -11,12 +11,11 @@ struct TaskRowView: View {
 
     var body: some View {
         return HStack {
-            RoundedRectangle(cornerRadius: 20).foregroundColor(.gray).frame(width: 2, height: 45)
-            Text(task.text).padding(.leading)
+            Text(task.text)
             Spacer()
-            Image(systemName: task.checked ? "checkmark.circle" : "circle").resizable().foregroundColor(task.checked ? .black : .gray).frame(width: 24, height: 24)
+            Image(systemName: task.checked ? "checkmark.square.fill" : "square").resizable().foregroundColor(task.checked ? .black : .gray).frame(width: 24, height: 24)
         }
-        .padding(4)
+        .padding([.vertical], 10)
         .listRowSeparator(.hidden)
     }
 }
