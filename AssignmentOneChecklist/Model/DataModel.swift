@@ -64,6 +64,24 @@ struct DataModel: Codable {
               let data = try? JSONEncoder().encode(self) else { return }
         try? data.write(to: url)
     }
+    
+    // delete checklist
+    mutating func delete(at offsets: IndexSet) {
+        lists.remove(atOffsets: offsets)
+        save()
+    }
+
+    // add new checklist
+    mutating func addNewChecklist() {
+        lists.append(Checklist(name: "New Checklist", tasks: []))
+        save()
+    }
+
+    // change checklist order (onMove)
+    mutating func move(from source: IndexSet, to destination: Int) {
+        lists.move(fromOffsets: source, toOffset: destination)
+        save()
+    }
 }
 
 var testLists = [

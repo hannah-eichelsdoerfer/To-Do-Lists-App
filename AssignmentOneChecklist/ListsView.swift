@@ -13,33 +13,45 @@ struct ListsView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(model.lists) { checklist in
+                ForEach(Array(model.lists.enumerated()), id: \.element.id) { index, checklist in
                     NavigationLink(destination: ListView(checklist: checklist, model: $model)) {
-                        Text(checklist.name)
+                        HStack {
+                            Image(systemName: checklist.icon.rawValue).imageScale(.medium)
+                            Text(checklist.name).padding()
+                        }
+                    }
+                    .listRowSeparator(.hidden)
+                    .swipeActions {
+                        Button(role: .destructive) {
+                            model.delete(at: IndexSet(integer: index))
+                        } label: {
+                            Label("Delete", systemImage: "trash")
+                        }
+                        .tint(.accentColor)
                     }
                 }
                 .onMove { indexSet, offset in
-                    model.lists.move(fromOffsets: indexSet, toOffset: offset)
-                    model.save()
+                    model.move(from: indexSet, to: offset)
                 }
                 .onDelete { indexSet in
-                    model.lists.remove(atOffsets: indexSet)
-                    model.save()
+                    model.delete(at: indexSet)
                 }
             }
             .listStyle(.plain)
             .navigationTitle("Checklists")
             .navigationBarItems(
-                leading: EditButton(),
-                trailing: Button(action: add, label: { Image(systemName: "plus")})
+                trailing: EditButton()
             )
+            .safeAreaInset(edge: VerticalEdge.bottom) {
+                Button(action: { model.addNewChecklist()}) {
+                    Label("New List", systemImage: "plus")
+                        .padding([.horizontal], 90)
+                        .padding([.vertical], 5)
+                }
+                .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.capsule)
+            }
         }
-//        .foregroundColor(.orange)
-        .accentColor(.black)
-    }
-    
-    func add(){
-        model.lists.append(Checklist(id: UUID(), name: "New List", tasks: []))
     }
 }
 
