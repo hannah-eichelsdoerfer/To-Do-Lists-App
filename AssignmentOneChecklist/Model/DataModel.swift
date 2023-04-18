@@ -18,8 +18,8 @@ struct Checklist: Codable, Identifiable {
     var id: UUID = UUID()
     var name: String
     var tasks: [Task]
+    var icon: Icon = Icon.checklist
     
-    // Updates corresponding entry in DataModelList and saves it to file
     func save(to dataModelList: inout DataModel) {
         if let index = dataModelList.lists.firstIndex(where: { $0.id == self.id }) {
             dataModelList.lists[index] = self
