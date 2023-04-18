@@ -29,7 +29,14 @@ struct Checklist: Codable, Identifiable {
     
     mutating func reset() {
         for i in 0..<tasks.count {
+            tasks[i].previousChecked = tasks[i].checked
             tasks[i].checked = false
+        }
+    }
+
+    mutating func undo() {
+        for i in 0..<tasks.count {
+            tasks[i].checked = tasks[i].previousChecked
         }
     }
 }
