@@ -25,6 +25,7 @@ struct IconPickerView: View {
         }
         .pickerStyle(.menu)
         .labelsHidden()
+        .tint(.primary)
     }
 }
 
