@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		180C67AA29EFF87600DBC017 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C67A929EFF87600DBC017 /* NewTaskView.swift */; };
-		180E478A29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
-		180E478B29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
+		180E478A29D02B63008A64BD /* Checklists in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Checklists */; };
+		180E478B29D02B63008A64BD /* Checklists in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Checklists */; };
 		185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BE60529DD1B9A00902A6A /* ListsView.swift */; };
-		185E669529CCE7A000186DE8 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669429CCE7A000186DE8 /* TaskRowView.swift */; };
 		185E669D29CD71A500186DE8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669C29CD71A500186DE8 /* DataModel.swift */; };
+		1885ACD329F0147600526779 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1885ACD229F0147600526779 /* TaskRowView.swift */; };
 		18A0986F29EE70F4008D9B88 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0986E29EE70F4008D9B88 /* IconPickerView.swift */; };
 		18A0987429EE83E1008D9B88 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18A0987329EE83E1008D9B88 /* ConfettiSwiftUI */; };
 		18A0987C29EEEC92008D9B88 /* ListTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0987B29EEEC92008D9B88 /* ListTitleView.swift */; };
@@ -44,11 +44,11 @@
 
 /* Begin PBXFileReference section */
 		180C67A929EFF87600DBC017 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
-		180E478929D02B63008A64BD /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
+		180E478929D02B63008A64BD /* Checklists */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Checklists; sourceTree = "<group>"; };
 		1813EEEA29D042DE00819E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		185BE60529DD1B9A00902A6A /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
-		185E669429CCE7A000186DE8 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		185E669C29CD71A500186DE8 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		1885ACD229F0147600526779 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		18A0986E29EE70F4008D9B88 /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
 		18A0987B29EEEC92008D9B88 /* ListTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleView.swift; sourceTree = "<group>"; };
 		18A541B129C97C8B004519AC /* AssignmentOneChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentOneChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,16 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		185E669829CCEB2100186DE8 /* View */ = {
+		185E669829CCEB2100186DE8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				185E669429CCE7A000186DE8 /* TaskRowView.swift */,
+				1885ACD229F0147600526779 /* TaskRowView.swift */,
 				18A541B629C97C8B004519AC /* ListView.swift */,
+				185BE60529DD1B9A00902A6A /* ListsView.swift */,
 				180C67A929EFF87600DBC017 /* NewTaskView.swift */,
 				18A0987B29EEEC92008D9B88 /* ListTitleView.swift */,
 				18A0986E29EE70F4008D9B88 /* IconPickerView.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		185E669929CCEB2700186DE8 /* Model */ = {
@@ -113,7 +114,7 @@
 		18A541A829C97C8B004519AC = {
 			isa = PBXGroup;
 			children = (
-				180E478929D02B63008A64BD /* Documentation.docc */,
+				180E478929D02B63008A64BD /* Checklists */,
 				18A541DE29C97D1E004519AC /* ReadMe.md */,
 				18A541B329C97C8B004519AC /* AssignmentOneChecklist */,
 				18A541C429C97C8D004519AC /* AssignmentOneChecklistTests */,
@@ -137,10 +138,9 @@
 			children = (
 				1813EEEA29D042DE00819E7C /* Info.plist */,
 				185E669929CCEB2700186DE8 /* Model */,
-				185E669829CCEB2100186DE8 /* View */,
+				185E669829CCEB2100186DE8 /* Views */,
 				18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */,
 				18A541B829C97C8D004519AC /* Assets.xcassets */,
-				185BE60529DD1B9A00902A6A /* ListsView.swift */,
 				18A541BA29C97C8D004519AC /* Preview Content */,
 			);
 			path = AssignmentOneChecklist;
@@ -308,14 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A0987C29EEEC92008D9B88 /* ListTitleView.swift in Sources */,
+				1885ACD329F0147600526779 /* TaskRowView.swift in Sources */,
 				185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */,
-				180E478A29D02B63008A64BD /* Documentation.docc in Sources */,
+				180E478A29D02B63008A64BD /* Checklists in Sources */,
 				18A541B729C97C8B004519AC /* ListView.swift in Sources */,
 				18A0986F29EE70F4008D9B88 /* IconPickerView.swift in Sources */,
 				180C67AA29EFF87600DBC017 /* NewTaskView.swift in Sources */,
 				18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */,
 				185E669D29CD71A500186DE8 /* DataModel.swift in Sources */,
-				185E669529CCE7A000186DE8 /* TaskRowView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18A541C629C97C8D004519AC /* AssignmentOneChecklistTests.swift in Sources */,
-				180E478B29D02B63008A64BD /* Documentation.docc in Sources */,
+				180E478B29D02B63008A64BD /* Checklists in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
