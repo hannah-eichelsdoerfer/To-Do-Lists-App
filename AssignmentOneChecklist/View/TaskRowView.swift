@@ -5,7 +5,6 @@
 //  Created by Hannah on 24/3/2023.
 //
 import SwiftUI
-import ConfettiSwiftUI
 
 struct TaskRowView: View {
     var task: Task

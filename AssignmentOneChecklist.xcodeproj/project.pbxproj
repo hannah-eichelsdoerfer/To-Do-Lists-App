@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180C67AA29EFF87600DBC017 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C67A929EFF87600DBC017 /* NewTaskView.swift */; };
 		180E478A29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
 		180E478B29D02B63008A64BD /* Documentation.docc in Sources */ = {isa = PBXBuildFile; fileRef = 180E478929D02B63008A64BD /* Documentation.docc */; };
 		185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185BE60529DD1B9A00902A6A /* ListsView.swift */; };
 		185E669529CCE7A000186DE8 /* TaskRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669429CCE7A000186DE8 /* TaskRowView.swift */; };
 		185E669D29CD71A500186DE8 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 185E669C29CD71A500186DE8 /* DataModel.swift */; };
+		18A0986F29EE70F4008D9B88 /* IconPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0986E29EE70F4008D9B88 /* IconPickerView.swift */; };
+		18A0987429EE83E1008D9B88 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 18A0987329EE83E1008D9B88 /* ConfettiSwiftUI */; };
+		18A0987C29EEEC92008D9B88 /* ListTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A0987B29EEEC92008D9B88 /* ListTitleView.swift */; };
 		18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */; };
 		18A541B729C97C8B004519AC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A541B629C97C8B004519AC /* ListView.swift */; };
 		18A541B929C97C8D004519AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18A541B829C97C8D004519AC /* Assets.xcassets */; };
@@ -39,11 +43,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		180C67A929EFF87600DBC017 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		180E478929D02B63008A64BD /* Documentation.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Documentation.docc; sourceTree = "<group>"; };
 		1813EEEA29D042DE00819E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		185BE60529DD1B9A00902A6A /* ListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListsView.swift; sourceTree = "<group>"; };
 		185E669429CCE7A000186DE8 /* TaskRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRowView.swift; sourceTree = "<group>"; };
 		185E669C29CD71A500186DE8 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		18A0986E29EE70F4008D9B88 /* IconPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconPickerView.swift; sourceTree = "<group>"; };
+		18A0987B29EEEC92008D9B88 /* ListTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitleView.swift; sourceTree = "<group>"; };
 		18A541B129C97C8B004519AC /* AssignmentOneChecklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssignmentOneChecklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOneChecklistApp.swift; sourceTree = "<group>"; };
 		18A541B629C97C8B004519AC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -62,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A0987429EE83E1008D9B88 /* ConfettiSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +95,9 @@
 			children = (
 				185E669429CCE7A000186DE8 /* TaskRowView.swift */,
 				18A541B629C97C8B004519AC /* ListView.swift */,
+				180C67A929EFF87600DBC017 /* NewTaskView.swift */,
+				18A0987B29EEEC92008D9B88 /* ListTitleView.swift */,
+				18A0986E29EE70F4008D9B88 /* IconPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -128,8 +139,8 @@
 				185E669929CCEB2700186DE8 /* Model */,
 				185E669829CCEB2100186DE8 /* View */,
 				18A541B429C97C8B004519AC /* AssignmentOneChecklistApp.swift */,
-				185BE60529DD1B9A00902A6A /* ListsView.swift */,
 				18A541B829C97C8D004519AC /* Assets.xcassets */,
+				185BE60529DD1B9A00902A6A /* ListsView.swift */,
 				18A541BA29C97C8D004519AC /* Preview Content */,
 			);
 			path = AssignmentOneChecklist;
@@ -177,6 +188,7 @@
 			);
 			name = AssignmentOneChecklist;
 			packageProductDependencies = (
+				18A0987329EE83E1008D9B88 /* ConfettiSwiftUI */,
 			);
 			productName = AssignmentOneChecklist;
 			productReference = 18A541B129C97C8B004519AC /* AssignmentOneChecklist.app */;
@@ -251,6 +263,7 @@
 			);
 			mainGroup = 18A541A829C97C8B004519AC;
 			packageReferences = (
+				18A0987229EE83E1008D9B88 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = 18A541B229C97C8B004519AC /* Products */;
 			projectDirPath = "";
@@ -294,9 +307,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A0987C29EEEC92008D9B88 /* ListTitleView.swift in Sources */,
 				185BE60629DD1B9A00902A6A /* ListsView.swift in Sources */,
 				180E478A29D02B63008A64BD /* Documentation.docc in Sources */,
 				18A541B729C97C8B004519AC /* ListView.swift in Sources */,
+				18A0986F29EE70F4008D9B88 /* IconPickerView.swift in Sources */,
+				180C67AA29EFF87600DBC017 /* NewTaskView.swift in Sources */,
 				18A541B529C97C8B004519AC /* AssignmentOneChecklistApp.swift in Sources */,
 				185E669D29CD71A500186DE8 /* DataModel.swift in Sources */,
 				185E669529CCE7A000186DE8 /* TaskRowView.swift in Sources */,
@@ -619,6 +635,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		18A0987229EE83E1008D9B88 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18A0987329EE83E1008D9B88 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 18A0987229EE83E1008D9B88 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 18A541A929C97C8B004519AC /* Project object */;
 }
