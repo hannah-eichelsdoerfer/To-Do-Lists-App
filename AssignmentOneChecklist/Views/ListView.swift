@@ -39,14 +39,6 @@ struct ListView: View {
                         }
                         .tint(.accentColor)
                     }
-                    .confettiCannon(
-                        counter: $counter,
-                        num: 50,
-                        colors: [.accentColor, .purple],
-                        openingAngle: Angle(degrees: 0),
-                        closingAngle: Angle(degrees: 360),
-                        radius: 300
-                    )
                 }
                 .onMove { indexSet, offset in
                     checklist.tasks.move(fromOffsets: indexSet, toOffset: offset)
@@ -58,6 +50,14 @@ struct ListView: View {
             }
             .listStyle(.plain)
             .navigationBarTitleDisplayMode(.inline)
+            .confettiCannon(
+                counter: $counter,
+                num: 100,
+                colors: [.accentColor, .purple],
+                openingAngle: Angle(degrees: 0),
+                closingAngle: Angle(degrees: 360),
+                radius: 300
+            )
         }
         .toolbar {
             let checked = checklist.tasks.contains(where: { $0.checked == true })  // checklist can only be reset if at least on task is checked
