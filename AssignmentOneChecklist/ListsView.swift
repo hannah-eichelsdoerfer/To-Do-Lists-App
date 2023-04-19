@@ -10,46 +10,60 @@ import SwiftUI
 struct ListsView: View {
     @Binding var model: DataModel
     
+    @State var isLoading = false
+    
     var body: some View {
         NavigationView {
-            List {
-                ForEach(Array(model.lists.enumerated()), id: \.element.id) { index, checklist in
-                    NavigationLink(destination: ListView(checklist: checklist, model: $model)) {
-                        HStack {
-                            Image(systemName: checklist.icon.rawValue).imageScale(.medium)
-                            Text(checklist.name).padding()
+            if isLoading {
+                ProgressView().scaleEffect(2.0)
+                    .navigationTitle("Checklists")
+            } else {
+                List {
+                    ForEach(Array(model.lists.enumerated()), id: \.element.id) { index, checklist in
+                        NavigationLink(destination: ListView(checklist: checklist, model: $model)) {
+                            HStack {
+                                Image(systemName: checklist.icon.rawValue).imageScale(.medium)
+                                Text(checklist.name).padding()
+                            }
+                        }
+                        .listRowSeparator(.hidden)
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                model.delete(at: IndexSet(integer: index))
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                            .tint(.accentColor)
                         }
                     }
-                    .listRowSeparator(.hidden)
-                    .swipeActions {
-                        Button(role: .destructive) {
-                            model.delete(at: IndexSet(integer: index))
-                        } label: {
-                            Label("Delete", systemImage: "trash")
-                        }
-                        .tint(.accentColor)
+                    .onMove { indexSet, offset in
+                        model.move(from: indexSet, to: offset)
+                    }
+                    .onDelete { indexSet in
+                        model.delete(at: indexSet)
                     }
                 }
-                .onMove { indexSet, offset in
-                    model.move(from: indexSet, to: offset)
-                }
-                .onDelete { indexSet in
-                    model.delete(at: indexSet)
+                .listStyle(.plain)
+                .navigationTitle("Checklists")
+                .navigationBarItems(
+                    trailing: EditButton()
+                )
+                .safeAreaInset(edge: VerticalEdge.bottom) {
+                    Button(action: { model.addNewChecklist()}) {
+                        Label("New List", systemImage: "plus")
+                            .padding([.horizontal], 90)
+                            .padding([.vertical], 5)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .buttonBorderShape(.capsule)
                 }
             }
-            .listStyle(.plain)
-            .navigationTitle("Checklists")
-            .navigationBarItems(
-                trailing: EditButton()
-            )
-            .safeAreaInset(edge: VerticalEdge.bottom) {
-                Button(action: { model.addNewChecklist()}) {
-                    Label("New List", systemImage: "plus")
-                        .padding([.horizontal], 90)
-                        .padding([.vertical], 5)
-                }
-                .buttonStyle(.borderedProminent)
-                .buttonBorderShape(.capsule)
+        }
+        .onAppear {
+            isLoading = true
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+//              model.load()
+                isLoading = false
             }
         }
     }
