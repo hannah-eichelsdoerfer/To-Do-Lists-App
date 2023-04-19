@@ -11,6 +11,7 @@ We then continued with SwiftUI, which is a framework for building user interface
 Seperation of concerns is a very important topic in SwiftUI, which means that the view should only contain the view code and the logic should be in the ViewModel. The ViewModel can be a class or struct that is responsible for the logic of the view.
 
 I've implemented the following tasks:
+
 - git source control to document development steps and thoughts
 - basic Documentation setup to expand in the future
 - an app displaying a list of tasks
@@ -19,6 +20,7 @@ I've implemented the following tasks:
 - a subview for each task which displays a RoundedRectangle category color, text and checked state with an icon
 
 Other topics that were covered but not implemented in the first milestone are:
+
 - Navigation
 - Inputs
 - Master and Detail View
@@ -26,7 +28,9 @@ Other topics that were covered but not implemented in the first milestone are:
 - Binding
 
 ### First milestone video
-Link to Video: 
+
+Link to Video:
+
 > https://www.loom.com/share/4878ec8db65a4751a0e0c984a9cf61a0
 
 https://user-images.githubusercontent.com/64103699/227772226-195ec910-d7b1-448f-bc16-df5cb8a08bf4.mp4
@@ -56,4 +60,24 @@ DetailView:
 
 https://user-images.githubusercontent.com/64103699/230113650-086192e2-f7a5-4734-882c-3fb6bfd88ff8.mp4
 
+## Third Milestone
 
+start from 03.04.2022
+
+In the third milestone, I implemented the following features:
+
+- Color and Icon Assets
+- Icon Picker for Checklists
+- Extracted Views to keep the code clean and readable
+- Added a fake loading spinner to the app to simulate loading data from a server
+- Added more tests for the models to test all critical functions of the DataModel
+- Wrote the documentation for the App
+- Adapted the design of the app to be more compelling for the user
+- Added a Swift Package that throws confetti when the user completes a task
+
+I've decided against refactoring my app to use a class instead of struct for my DataModel as for the current functionaly I managed to implement all the requirements with a struct.
+
+### Third milestone video
+
+> Part 1: Quick Rundown of the App, Git History, Tests and Datamodel https://www.loom.com/share/ab5f9794231d44c899179fc81d6e04d5
+> Part 2: Continuing Documentation + Code Structure https://www.loom.com/share/4fefe4aa7f1242fda61280913a1b8b10
