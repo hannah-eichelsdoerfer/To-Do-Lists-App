@@ -8,14 +8,21 @@
 import SwiftUI
 import ConfettiSwiftUI
 
+/// The ListView struct represents a view that displays the tasks of a checklist.
 struct ListView: View {
+    /// EditMode is a property wrapper that is used to determine whether the ListView is in edit mode.
     @Environment(\.editMode) private var editMode
     
+    /// The checklist that the ListView is displaying.
     @State var checklist: Checklist
+    /// The DataModel that the ListView is using.
     @Binding var model: DataModel
     
+    /// The text of the new task that the user is adding to the checklist.
     @State var newTask: String = ""
+    /// A boolean that indicates whether the user can undo the last action.
     @State private var canUndo = false
+    /// A counter that is used to trigger the confetti animation.
     @State private var counter: Int = 0
 
     var body: some View {
@@ -74,17 +81,23 @@ struct ListView: View {
         })
     }
     
+    /// Adds a new task to the checklist and resets the newTask property to an empty string and saves the checklist to the DataModel.
+    /// - Parameter newTask: The text of the new task that the user is adding to the checklist.
     private func addNewTask() {
         checklist.tasks.append(Task(text: newTask))
         newTask = ""
         checklist.save(to: &model)
     }
     
+    /// Deletes a task from the checklist and saves the checklist to the DataModel.
+    /// - Parameter offsets: The index of the task that the user is deleting from the checklist.
     private func deleteTask(at offsets: IndexSet) {
         checklist.tasks.remove(atOffsets: offsets)
         checklist.save(to: &model)
     }
     
+    /// Toggles the checked property of a task and saves the checklist to the DataModel.
+    /// - Parameter task: The task that the user is toggling.
     private func toggleTask(task: Task) {
         if !task.checked { counter += 1 }
         if let index = checklist.tasks.firstIndex(where: { $0.id == task.id }) {
@@ -93,12 +106,14 @@ struct ListView: View {
         }
     }
     
+    /// Resets the checklist and saves the checklist to the DataModel.
     private func onReset() {
         canUndo = true
         checklist.reset()
         checklist.save(to: &model)
     }
 
+    /// Undoes the reset action and saves the checklist to the DataModel.
     private func undo() {
         canUndo = false
         checklist.undo()

@@ -6,7 +6,10 @@
 //
 import SwiftUI
 
+
+/// The TaskRowView struct represents a view that displays a task in a checklist with its text and a checkbox.
 struct TaskRowView: View {
+    /// The task that the TaskRowView is referencing.
     var task: Task
 
     var body: some View {

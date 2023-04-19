@@ -21,8 +21,7 @@ struct Task: Codable, Identifiable {
 }
 
 /// The Checklist struct represents a checklist.
-/// Each checklist has a unique identifier, a name, an array of tasks, and an icon (default is the checklist SF Symbol).
-/// You can save a checklist to a DataModel, reset all tasks to unchecked, undo previous changes, and more.
+/// Each checklist has a unique identifier, a name, an array of tasks, and an icon.
 struct Checklist: Codable, Identifiable {
     /// The unique identifier of the checklist.
     var id: UUID = UUID()
@@ -30,7 +29,7 @@ struct Checklist: Codable, Identifiable {
     var name: String
     /// The array of ``Task``s in the checklist.
     var tasks: [Task]
-    /// The ``Icon`` of the checklist.
+    /// The ``Icon`` of the checklist (default is the SF symbol checklist)
     var icon: Icon = Icon.checklist
     
     /// This function saves the checklist to the provided ``DataModel``.
@@ -41,7 +40,7 @@ struct Checklist: Codable, Identifiable {
         }
     }
     
-    /// This function resets all tasks in the checklist to unchecked.
+    /// This function resets all tasks in the checklist to unchecked by setting the `checked` property to false and saving the previous state in the `previousChecked` property.
     mutating func reset() {
         for i in 0..<tasks.count {
             tasks[i].previousChecked = tasks[i].checked
@@ -96,14 +95,12 @@ struct DataModel: Codable {
         save()
     }
     
-    
     /// Deletes a checklist and saves the DataModel.
     /// - Parameter offsets: The index of the checklist to be deleted.
     mutating func delete(at offsets: IndexSet) {
         lists.remove(atOffsets: offsets)
         save()
     }
-
 
     /// Changes the order of the checklists and saves the DataModel.
     /// - Parameters:
@@ -115,7 +112,8 @@ struct DataModel: Codable {
     }
 }
 
-/// Returns the URL of the file where the data is stored.
+/// This function is used to get the URL of the file where the data is saved.
+/// - Returns: URL of the file where the data is saved.
 func getFile() -> URL? {
     let filename = "lists.json"
     let fm = FileManager.default
@@ -130,7 +128,7 @@ var testLists = [
         Task(text: "Do Laundry"),
         Task(text: "Clean Bathroom", checked: true),
         Task(text: "Vacuum", checked: true),
-    ]),
+    ], icon: .house),
     Checklist(name: "Uni", tasks: [
         Task(text: "Mobile Device Software Development 1"),
     ]),

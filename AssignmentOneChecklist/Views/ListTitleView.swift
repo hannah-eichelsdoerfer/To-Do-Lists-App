@@ -7,8 +7,12 @@
 
 import SwiftUI
 
+/// The ListTitleView struct represents a view that displays the title of a checklist and the icon of the checklist.
+/// In edit mode, the user can edit the name of the checklist and select a new icon.
 struct ListTitleView: View {
+    /// The checklist that the ListTitleView is referencing.
     @Binding var checklist: Checklist
+    /// The inherited EditMode which is used to determine whether the ListTitleView is in edit mode.
     var editMode: Binding<EditMode>
     
     var body: some View {

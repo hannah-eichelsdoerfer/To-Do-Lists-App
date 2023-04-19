@@ -7,12 +7,13 @@
 
 import SwiftUI
 
+/// The Icon enum represents the icon of a checklist.
 enum Icon: String, Codable, CaseIterable, Identifiable {
     case checklist, airplane, heart, graduationcap, cart, laptopcomputer, house, gamecontroller, clock, person
     var id: Self { self }
 }
 
-
+/// The IconPickerView struct represents a view that allows the user to select an icon from a menu.
 struct IconPickerView: View {
     @Binding var selectedIcon: Icon
     

@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+/// The ListsView struct represents a view that displays all checklists in a list.
 struct ListsView: View {
+    /// The DataModel that the ListsView is referencing.
     @Binding var model: DataModel
-    
+    /// The state is indicating whether the app is loading or not.
     @State var isLoading = false
     
     var body: some View {
@@ -36,9 +38,11 @@ struct ListsView: View {
                             .tint(.accentColor)
                         }
                     }
+                    /// This allows the user to reorder the checklists by dragging them.
                     .onMove { indexSet, offset in
                         model.move(from: indexSet, to: offset)
                     }
+                    /// This allows the user to delete a checklist by swiping it to the left.
                     .onDelete { indexSet in
                         model.delete(at: indexSet)
                     }
